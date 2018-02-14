@@ -1,3 +1,4 @@
+## Loading and preprocessing the data
 ```{r setoptions, echo=TRUE}
 
 #Assume the activity.csv was placed at the same directory as this Rmarkdown file.  
@@ -108,5 +109,6 @@ avgStepDateIs = aggregate(steps~interval + dateIs, mean, data=dataNew)
 
 library(lattice)
 xyplot( steps ~ interval | dateIs, data = avgStepDateIs, type="l", layout=c(1,2), xlab="Interval", ylab="Number of steps")
+
 
 ```
