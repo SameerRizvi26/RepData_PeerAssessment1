@@ -1,0 +1,4 @@
+activity <- read.csv("activity.csv")
+
+hist(activity$steps, main="Histogram of Steps")
+summary(activity$steps, na.rm=T)
