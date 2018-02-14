@@ -24,9 +24,7 @@ sumStep = aggregate(steps ~ date, dataTidy, sum)
 # plot graph
 hist(sumStep$steps, col = "red", main = "Total number of steps taken each day", 
     xlab = "Steps Per Day")
-```
-
-![plot of chunk part2](figure/part2.png) 
+``` 
 
 ```r
 
@@ -61,8 +59,6 @@ avgStep = aggregate(steps ~ interval, dataTidy, mean)
 plot(avgStep$interval, avgStep$step, type = "l", xlab = "5-minute interval identifiers", 
     ylab = "Steps", main = "Average number of steps across all days")
 ```
-
-![plot of chunk part3](figure/part3.png) 
 
 ```r
 
@@ -110,8 +106,6 @@ hist(sumStepNew$steps, col = "red", main = "Total number of steps taken each day
     xlab = "Total Number of Steps")
 ```
 
-![plot of chunk part4](figure/part4.png) 
-
 ```r
 
 # calculate the mean and median total number of steps taken per day
@@ -151,4 +145,3 @@ xyplot(steps ~ interval | dateIs, data = avgStepDateIs, type = "l", layout = c(1
     2), xlab = "Interval", ylab = "Number of steps")
 ```
 
-![plot of chunk part5](figure/part5.png) 
